@@ -1,0 +1,106 @@
+{% load comments %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Luke Carlson Portfolio Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luke Carlson's Portfolio">
+    <meta name="author" content="Luke Carlson">
+
+    <link href="/static/css/luke-bootstrap.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- NAVBAR-->
+      <div class="navbar">
+	<div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="../">jLukeCarlson</a>
+	    <div class="nav-collapse">
+              <ul class="nav">
+		<li><a href="/">Home</a></li>
+		<!--  <li class="divider-vertical"></li> -->
+		<li><a href="/projects">Projects</a></li>
+		<li><a href="/resume.html">Resume</a></li>
+		<li><a href="/about.html">About</a></li>
+		<li><a href="/contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+	</div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+	      <li><a href ="/projects"> All projects </a></li>
+              <li class="nav-header"> HTML CSS Javascript</li>
+	      {% for project in projects_list %}
+	      {% if project.category = "Web" %}
+	      <li><a href="../{{ project.slug }}/">{{ project.title }}</a></li>
+	      {% endif %}
+	      {% endfor %}
+	      <li class="nav-header">Python</li>
+	      {% for project in projects_list %}
+	      {% if project.category = "Python" %}
+	      <li><a href="../{{ project.slug }}/">{{ project.title }}</a></li>
+	      {% endif %}
+	      {% endfor %}
+	      <li class="nav-header">Miscellaneous</li> <!-- for now anything not Python or Web is "Misc" -->
+	      {% for project in projects_list %}
+	      {% ifnotequal project.category "Python" %}
+	      {% ifnotequal project.categoy "Web" %}
+	      <li><a href="../{{ project.slug }}/">{{ project.title }}</a> ( {{project.category}} )</li>
+	      {% endifnotequal %}
+	      {% endifnotequal %}
+	      {% endfor %}
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+	<div class="span9">
+	  <div id = {{ slug }} class ="low-pad-unit">
+	    <h2> {{ project.title }}</h2>
+	    <h5> {{ project.pub_date }} by Luke Carlson
+	  </div>
+	  {% include slugsite %} <!--include adds in the html file -->
+	  <!-- Comments -->
+	  <div class="low-pad-unit">
+	    {% get_comment_count for project as comment_count %}
+	    <p>{{ comment_count }} comments have been posted.</p>
+	    {% get_comment_list for project as comment_list %}
+	    {% for comment in comment_list %}
+	    <p>Posted by: {{ comment.user_name }} on {{ comment.submit_date }}</p>
+	    <p>Comment: {{ comment.comment }}</p>
+	    <a href="/flag/{{ comment.id }}/">Flag Comment </a>
+	    {% endfor %}
+
+<!--
+	    {% get_comment_form for project as form %}
+	    <table>
+	      <form action="{% comment_form_target %}" method="post">
+		{% csrf_token %}
+		{{ form }}
+		<tr>
+		  <td colspan="2">
+		    <input type="submit" name="submit" value="Post">
+		    <input type="submit" name="preview" value="Preview">
+		  </td>
+		</tr>
+	      </form> -->
+	    </table>
+	  </div>
+	</div> <!-- span 9 -->
+      </div> <!-- row -->
+    </div> <!-- container -->
