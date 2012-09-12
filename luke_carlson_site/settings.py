@@ -132,6 +132,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.comments', #comments
     'luke_carlson_site',
+    'gunicorn', # WSGI Server
+
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
