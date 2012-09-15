@@ -157,7 +157,7 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: Palatino, "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Palatino, "Lucida Grande", Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color:  #412715; /* #ad3434;  #333333; */
