@@ -7,8 +7,10 @@
     <meta name="description" content="Luke Carlson's projects">
     <meta name="author" content="Luke Carlson">
 
-    <!-- Le styles -->
+    <!--  styles -->
     <link href="/static/css/luke-bootstrap.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/project-manipulator.js"></script>
   </head>
 
   <body>
@@ -41,7 +43,19 @@
       <div class="row">
         <div class="span3">
           <div class="well sidebar-nav">
-            <ul class="nav nav-list">
+	    <ul class="nav nav-list">
+	      <li><a id="show-all" href="">All Projects</a></li>
+              <li class="nav-header">HTML CSS Javascript</li>
+              <li><a id="todo-click" href="#!todo-list">Todo List</a></li>
+              <li class="nav-header">Python</li>
+              <li><a id="defbot-click" href="#!twitterdefbot">Twitter Definition Bot</a></li>
+              <li><a id="crunch-click" href="#!crunchbase-scraper">CrunchBase Scraper</a></li>
+              <li class="nav-header">Java or Processing</li>
+              <li class="nav-header">ActionScript 2.0</li>
+              <li><a id="parashoot-click" href="#!parashoot">Parashoot</a></li>
+            </ul>
+	    <!-- Django Projects Navbar -->
+<!--            <ul class="nav nav-list">
               <li class="nav-header"> HTML CSS Javascript</li>
 
 	      {% for project in projects_list %}
@@ -55,13 +69,13 @@
 	      <li><a href="/projects/{{ project.slug }}/">{{ project.title }}</a></li>
 	      {% endif %}
 	      {% endfor %}
-	      <li class="nav-header">Miscellaneous</li> <!-- for now anything not Python or Web is "Misc" -->
+	      <li class="nav-header">Miscellaneous</li> <!-- for now anything not Python or Web is "Misc"
 	      {% for project in projects_list %}
 	      {% if project.category !=  "Python" and project.category != "Web" %}
 	      <li><a href="/projects/{{ project.slug }}/">{{ project.title }}</a> ( {{project.category}} )</li>
 	      {% endif %}
 	      {% endfor %}
-              <!-- Unordered list of projects
+               Unordered list of projects
                    {% for project in project_set.all %}
 		   <li><a href="/projects/{{ project.slug }}/">{{ project.title }}</a></li>
                    {% endfor %}
