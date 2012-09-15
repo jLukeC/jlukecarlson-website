@@ -4023,6 +4023,7 @@ a.thumbnail:hover {
   font-weight: 200;
   line-height: 27px;
   color: inherit;
+  font-family: Palatino, "Lucida Grande", Helvetica,
 }
 .pull-right {
   float: right;
