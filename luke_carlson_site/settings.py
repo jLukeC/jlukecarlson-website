@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     'luke_carlson_site',
     'gunicorn', # WSGI Server
     'zinnia',
+    'south',
     # 'lukeblog', #blog
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
