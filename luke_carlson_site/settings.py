@@ -85,6 +85,9 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+# why dont you work at all
+#
+#
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '-r0)d19n&amp;eo&amp;!8e7@@tuvca-y6i-kcc57my+0im&amp;+mm5^z-izk'
@@ -133,6 +136,8 @@ INSTALLED_APPS = (
     'django.contrib.comments', #comments
     'luke_carlson_site',
     'gunicorn', # WSGI Server
+    'tagging',
+    'mptt',
     'zinnia',
     'south',
     # 'lukeblog', #blog
