@@ -1,3 +1,4 @@
+
 from django.conf.urls import patterns, include, url
 import settings
 
@@ -21,7 +22,9 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     url(r'^admin/', include(admin.site.urls)), #admin
-    (r'^comments/', include('django.contrib.comments.urls')), #comments
+    #(r'^comments/', include('django.contrib.comments.urls')), #comments
+    url(r'^weblog/', include('zinnia.urls')),
+    url(r'^comments/', include('django.contrib.comments.urls')),
 )
 #Static Stuf
 urlpatterns += patterns('',
