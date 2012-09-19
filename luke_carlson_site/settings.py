@@ -70,11 +70,12 @@ STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static') #'/Users/Luke/pr
 STATIC_URL = "/static/"
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-  'django.core.context_processors.auth',
+  'django.contrib.auth.context_processors.auth',
   'django.core.context_processors.i18n',
   'django.core.context_processors.request',
   'django.core.context_processors.media',
   'django.core.context_processors.static',
+  'django.core.context_processors.tz',
   'zinnia.context_processors.version',) # Optional
 
 # Additional locations of static files
