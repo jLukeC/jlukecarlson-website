@@ -69,6 +69,14 @@ STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static') #'/Users/Luke/pr
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = "/static/"
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+  'django.core.context_processors.auth',
+  'django.core.context_processors.i18n',
+  'django.core.context_processors.request',
+  'django.core.context_processors.media',
+  'django.core.context_processors.static',
+  'zinnia.context_processors.version',) # Optional
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     #STATIC_ROOT,
@@ -85,9 +93,6 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
-# why dont you work at all
-#
-#
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '-r0)d19n&amp;eo&amp;!8e7@@tuvca-y6i-kcc57my+0im&amp;+mm5^z-izk'
