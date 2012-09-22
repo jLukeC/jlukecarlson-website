@@ -25,7 +25,6 @@ urlpatterns = patterns('',
     #(r'^comments/', include('django.contrib.comments.urls')), #comments
     url(r'^weblog/', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
-    url(r'^', include('cms.urls')), 
 )
 #Static Stuf
 urlpatterns += patterns('',
