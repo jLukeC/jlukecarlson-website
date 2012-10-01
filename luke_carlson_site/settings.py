@@ -144,6 +144,7 @@ INSTALLED_APPS = (
     'gunicorn', # WSGI Server
     'tagging',
     'mptt',
+    'zinnia_bootstrap',
     'zinnia',
     'south',
     # 'lukeblog', #blog
