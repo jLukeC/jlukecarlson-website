@@ -22,6 +22,7 @@
 {% endblock %}
 
 {% block sidebar %}
+<div class="well">
 <aside id="widget-categories" class="widget">
   <h3>{% trans "Categories" %}</h3>
   {% get_categories %}
@@ -76,5 +77,6 @@
     </li>
   </ul>
 </aside>
+</div>
 {% endif %}
 {% endblock %}
