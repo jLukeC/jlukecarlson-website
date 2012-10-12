@@ -14,11 +14,14 @@
     {% block meta %}{% endblock %}
     <link rel="pingback" href="/xmlrpc/" />
     <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
-    <link href="{{ STATIC_URL }}zinnia_bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
-    <!--<link href="/static/css/luke-bootstrap.css" rel="stylesheet">-->
+    <!-- <link href="{{ STATIC_URL }}zinnia_bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="/static/css/luke-bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 40px;
+      }
+      .navbar-inner {
+        padding-top: 0px;
       }
     </style>
     <link href="{{ STATIC_URL }}zinnia_bootstrap/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
@@ -34,7 +37,6 @@
     {% block script %}{% endblock %}
   </head>
   <body class="zinnia {% block body-class %}{% endblock %}">
-    <div class="container">
     <header class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -85,7 +87,6 @@
         </div>
       </div>
     </header>
-  </div> <!-- container-->
     <div class="container">
       {% block breadcrumbs %}{% endblock %}
     </div>
