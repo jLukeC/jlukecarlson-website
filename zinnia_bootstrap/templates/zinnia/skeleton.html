@@ -5,7 +5,7 @@
 <html lang="{{ LANGUAGE_CODE }}">
   <head>
     <meta charset="utf-8">
-    <title>Zinnia's Blog - {% block title %}{% endblock %}</title>
+    <title>Luke Carlson's Blog - {% block title %}{% endblock %}</title>
     <meta name="robots" content="follow, all" />
     <meta name="description" content="{% block meta-description %}Demonstration of the Zinnia Blog application.{% endblock %}" />
     <meta name="keywords" content="{% block meta-keywords %}django, blog, zinnia, {{ entry_tags|join:", "}}{% endblock %}" />
@@ -37,7 +37,7 @@
       <div class="navbar-inner">
         <div class="container">
           <img src="{{ STATIC_URL }}zinnia_bootstrap/img/zinnia.png" class="pull-left" />
-          <a href="{% url 'zinnia_entry_archive_index' %}" title="Zinnia's Blog" class="brand" rel="home">
+          <a href="/" title="Zinnia's Blog" class="brand" rel="home"> <!--{% url 'zinnia_entry_archive_index' %}-->
             Luke Carlson's Blog
           </a>
           <ul class="nav pull-left">
