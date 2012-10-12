@@ -71,7 +71,15 @@
       {% endfor %}
     </p>
 
-
+<!--Removed the short url thing. It is not necessary but if I ever want it back just find the default Zinnia Bootstraps again and paste in 
+    <p class="entry-shorturl">
+      <i class="icon-bookmark"></i> <strong>{ PERCENT trans "Short url" PERCENT }</strong> :
+      <a href="object.short_url" ADD IN {}
+         title="{ PERCENT blocktrans with object=object.title PERCENT }Short URL to object ADD IN {} { PERCENT endblocktrans PERCENT }"
+         rel="shortlink">  object.short_url ADD IN 
+      </a>
+    </p>
+-->
     <p class="entry-comments">
       <i class="icon-comment"></i> <strong>{% trans "Discussions" %}</strong> :
       {% with comment_count=object.comments.count %}
