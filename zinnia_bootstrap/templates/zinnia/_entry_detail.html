@@ -1,6 +1,6 @@
 {% load tagging_tags comments i18n %}
 {% load url from future %}
-<article id="entry-{{ object.pk }}" class="hentry{% if object.featured %} featured{% endif %}">
+<article id="entry-{{ object.pk }}" class="well hentry{% if object.featured %} featured{% endif %}">
   <header class="entry-header">
     <h2 class="entry-title">
       <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="bookmark">
@@ -30,7 +30,7 @@
     </p>
   </header>
 
-  <div class="entry-body well">
+  <div class="entry-body">
     {% if object.image %}
     <div class="entry-image">
       <p>
