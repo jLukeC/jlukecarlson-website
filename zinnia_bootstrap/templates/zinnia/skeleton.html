@@ -16,15 +16,17 @@
     <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
     <!-- <link href="{{ STATIC_URL }}zinnia_bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
     <link href="/static/css/luke-bootstrap.css" rel="stylesheet">
-    <!--<style type="text/css">
-      body {
-        padding-top: 40px;
-        margin-top: 20px;
+    <style type="text/css">
+      #rightpad {
+        padding-right: 25px;
       }
-      .navbar-inner {
+      .breadcrumb {
+        margin-top: 10px;
+      } 
+      /*.navbar-inner {
         margin-top: -20px;
-      }
-    </style> -->
+      }*/
+    </style>
     <link href="{{ STATIC_URL }}zinnia_bootstrap/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -71,7 +73,7 @@
           <form method="get" action="{% url 'zinnia_entry_search' %}" class="navbar-search pull-left">
             <input type="text" class="search-query" placeholder="{% trans 'Search' %}" name="pattern" value="{{ pattern }}" />
           </form>
-          <ul class="nav pull-right">
+          <ul class="nav pull-right" id="rightpad">
             {% url 'zinnia_sitemap' as sitemap_url %}
             <li {% if sitemap in request.path %}class="active"{% endif %}>
             <li>
