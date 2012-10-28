@@ -51,7 +51,10 @@
           </a> -->
           <a class="brand" href="/">jLukeCarlson</a>
           <ul class="nav pull-left">
-            {% url 'zinnia_category_list' as category_list_url %}
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/weblog">Blog</a></li>
+            <!--{% url 'zinnia_category_list' as category_list_url %}
             <li {% if category_list_url in request.path %}class="active"{% endif %}>
               <a href="{{ category_list_url }}" title="{% trans "Category list" %}">
                 {% trans "Categories" %}
@@ -68,7 +71,7 @@
               <a href="{{ tag_list_url }}" title="{% trans "Tag list" %}">
                 {% trans "Tags" %}
               </a>
-            </li>
+            </li> -->
             <li class="divider-vertical"></li>
           </ul>
           <form method="get" action="{% url 'zinnia_entry_search' %}" class="navbar-search pull-left">
