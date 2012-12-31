@@ -8,27 +8,39 @@ $(document).ready(function(){
 	$('#todo-list').fadeIn();
 	$('#parashoot').fadeIn();
 	$('#twitterdefbot').fadeIn();
+	$('#president-game').fadeIn();
+    });
+    $('#president-click').click(function(){
+	$('#president-game').fadeIn();
+	$('#crunchbase-scraper').hide();
+	$('#todo-list').hide();
+	$('#parashoot').hide();
+	$('#twitterdefbot').hide();
     });
     $('#crunch-click').click(function(){
 	$('#crunchbase-scraper').fadeIn();
+	$('#president-game').hide();
 	$('#todo-list').hide();
 	$('#parashoot').hide();
 	$('#twitterdefbot').hide();
     });
     $('#todo-click').click(function(){
 	$('#todo-list').fadeIn();
+	$('#president-game').hide();
 	$('#twitterdefbot').hide();
 	$('#parashoot').hide();
 	$('#crunchbase-scraper').hide();
     });
     $('#defbot-click').click(function(){
 	$('#twitterdefbot').fadeIn();
+	$('#president-game').hide();
 	$('#todo-list').hide();
 	$('#parashoot').hide();
 	$('#crunchbase-scraper').hide();
     });
     $('#parashoot-click').click(function(){
 	$('#parashoot').fadeIn();
+	$('#president-game').hide();
 	$('#todo-list').hide();
 	$('#twitterdefbot').hide();
 	$('#crunchbase-scraper').hide();
