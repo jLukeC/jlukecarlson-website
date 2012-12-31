@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +9,8 @@
     <meta name="author" content="Luke Carlson">
 
     <!--  styles -->
-    <link href="/static/css/luke-bootstrap.css" rel="stylesheet">
+    <link href="/static/css/cyborg-bootstrap.css" rel="stylesheet">
+    <!-- <link href="/static/css/luke-bootstrap.css" rel="stylesheet"> -->
     <script src="/static/js/jquery.js"></script>
     <script src="/static/js/project-manipulator.js"></script>
   </head>
@@ -96,6 +98,28 @@
 	    <h1>Projects</h1>
 	    <p>Links to each project are located in the sidebar, or you can <strong> scroll down </strong> and view them all at once</p>
 	  </div>
+	  <div id= "president-game" class="hero-unit-project">
+	    <h2 class = "centered">Who's That President?</h2>
+	    <p>In this game, users are shown a picture of a US president for three seconds and then have to choose the correct name from four options shown on screen. This project was designed for OnSwipe’s 48-hour hackathon where the requirements were to create something for the web that can be used on both mobile phones and desktop computers. This script is written in Javascript and jQuery. </p>
+	    <p> The game is live at <a href="http://whosthatpresident.herokuapp.com/"> http://whosthatpresident.herokuapp.com </a></p>
+	    <p>Full source for the game is located at https://github.com/jLukeC/president-game/blob/master/president_game/static/president-game.js</p>
+	    <p><strong>	Programming Languages:</strong> JavaScript and jQuery</p>
+	    <p><strong>	Framework:</strong> Django</p>
+	    <ul class="thumbnails">
+	      <li>
+		<a href="http://whosthatpresident.herokuapp.com/" class="thumbnail">
+		  <img src="/static/img/president-game-options.png" alt="">
+		</a>
+		<a href="https://github.com/jLukeC/president-game/blob/master/president_game/static/president-game.js" target="_blank" class="thumbnail">
+		  <img src="/static/img/president-game-code.png" alt="">
+		</a>
+	      </li>
+	    </ul>
+	    <div class="centered"> <!-- buttons for GitHub and Live Game-->
+	      <a class="btn" target="_blank" href="https://github.com/jLukeC/president-game/blob/master/president_game/static/president-game.js">View Source on GitHub</a>
+	      <a class="btn btn-warning" target="_blank" href="http://whosthatpresident.herokuapp.com/">Play!</a>
+	    </div>
+	  </div>
 	  <div id= "crunchbase-scraper" class="hero-unit-project">
 	    <h2 class = "centered">Crunchbase Automated Company Finder</h2>
 	    <p>This is a python script I made for <a href = "www.appboy.com"> Appboy</a> that pulls information from Crunch Base using their API  and scrapes it to find companies of a specific type (in this case its mobile app startups). From there it goes back into the API to find more information on the company, like their phone number, email address, and company type. The information is then converted into a CSV file located in the data folder. The file's name depends on the search terms and the time the code was executed</p>
@@ -111,7 +135,7 @@
 		</a>
 	      </li>
 	    </ul>
-	    <div class="centered"> <!-- button div-->
+	    <div class="centered"> <!-- buttons for GitHub -->
 	      <a class="btn" target="_blank" href="https://github.com/jLukeC/CrunchBase-Company-Finder">View on GitHub</a>
 	    </div>
 	  </div>
